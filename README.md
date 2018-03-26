@@ -1,2 +1,3 @@
 # DoctrineEncryptBundle
-Bundle allows to create doctrine entities with fields that will be protected with help of some encryption algorithm in database and it will be clearly for developer, because bundle is uses doctrine life cycle events. Suitable for PHP 7.1+ since use openssl
+Symfony Bundle allows to create doctrine entities with fields that will be protected with help of some encryption algorithm in database and it will be clearly for developer, because bundle is uses doctrine life cycle events. Suitable for PHP 7.1+ since use openssl
+There is perfect such bundle https://github.com/vmelnik-ukraine/DoctrineEncryptBundle . Unfortunatelly it used mycrypt php library that is deprecashed from PHP 7.1 so I use http://php.net/manual/en/book.openssl.php instead. In all other I follow architecture of V Melnik bundle. So users of vmelnik have just to change bundle name
