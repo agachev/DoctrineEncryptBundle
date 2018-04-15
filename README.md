@@ -8,31 +8,35 @@ There is perfect such bundle https://github.com/vmelnik-ukraine/DoctrineEncryptB
 new EWS\Component\DoctrineEncryptBundle\EWSDoctrineEncryptBundle()
 
 3 Add to config.yml 
-###
+
+```yaml
 ews_doctrine_encrypt:
     secret_key: "%card_secret%"
     encryptor: "aes256"
     encryptor_class: ~
     encryptor_service: ~
     db_driver: "orm"
-
+```
 4 in parameters.yml
-card_secret: "yoursecretkey"
+
+```card_secret: "yoursecretkey"```
 
 in Entity
 add 
 
+```php
 use EWS\Component\DoctrineEncryptBundle\Configuration\Encrypted;
+```
 
 and in filed that is encrypted 
-@Encrypted like this
 
-/** 
+```php
+ /** 
   * @ORM\Column(name="trans_label", type="string", length=255, nullable=true)
-	* @Encrypted
+  * @Encrypted
   */
     private $transLabel;
-    
-    Do not forget to given enough length to ecryptrd field since openssl long enough data 
-    
-    I will add composer and examples soon
+```    
+Do not forget to given enough length to encrypted field since openssl long enough data 
+
+I will add composer and examples soon
